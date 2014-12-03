@@ -18,7 +18,7 @@
 - (void)addSubview:(UIView *)view andFadeInForDuration:(CGFloat)duration if:(BOOL)shouldAnimate;
 
 // Fades a subview's alpha to 0 then removes, or syncronously removes the subview
-- (void)removeFromSuperviewAndFadeOutduration:(CGFloat)duration if:(BOOL)shouldAnimate;
+- (void)removeFromSuperviewAndFadeOutWithDuration:(CGFloat)duration if:(BOOL)shouldAnimate;
 
 /// Useful for a fade animation
 + (void)animateTwoStepIf:(BOOL)shouldAnimate duration:(NSTimeInterval)duration :(void (^)(void))initialAnimations midway:(void (^)(void))midwayAnimations completion:(void (^)(BOOL finished))completion;
