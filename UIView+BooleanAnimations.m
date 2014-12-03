@@ -17,6 +17,21 @@
     }
 }
 
++ (void)animateIf:(BOOL)shouldAnimate duration:(NSTimeInterval)duration options:(UIViewAnimationOptions)options :(void (^)(void))animations
+{
+    [self animateIf:shouldAnimate duration:duration delay:0 options:options :animations completion:nil];
+}
+
++ (void)animateIf:(BOOL)shouldAnimate duration:(NSTimeInterval)duration delay:(NSTimeInterval)delay options:(UIViewAnimationOptions)options :(void (^)(void))animations completion:(void (^)(BOOL finished))completion
+{
+    if (!shouldAnimate) {
+        if(animations) animations();
+        if(completion) completion(YES);
+    } else {
+        [UIView animateWithDuration:duration delay:delay options:options animations:animations completion:completion];
+    }
+}
+
 + (void)animateSpringIf:(BOOL)shouldAnimate duration:(NSTimeInterval)duration delay:(NSTimeInterval)delay damping:(CGFloat)damping velocity:(CGFloat)velocity :(void (^)(void))animations
 {
     [self animateSpringIf:shouldAnimate duration:duration delay:delay damping:damping velocity:velocity :animations completion:nil];
