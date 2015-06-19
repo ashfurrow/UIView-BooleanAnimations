@@ -3,6 +3,34 @@ UIView-BooleanAnimations
 
 Perform changes to UI with or without animations, depending on a variable. 
 
+Installation
+------------
+
+Add the following to your Podfile. 
+
+```ruby
+pod 'UIView+BooleanAnimations'
+```
+
+Tun `pod install` and then use one of the following import statements, depending on if you're using frameworks and ObjC/Swift:
+
+```objc
+// With Framworks
+@import UIView_BooleanAnimations;
+
+// With static libraries
+#import <UIView+BooleanAnimations/UIView+BooleanAnimations.h>
+```
+
+```swift
+// With Swift
+import UIView_BooleanAnimations
+```
+
+Use
+---
+
+
 ``` objc
 @interface UIView (BooleanDependantAnimation)
 
